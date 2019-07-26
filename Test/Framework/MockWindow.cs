@@ -47,7 +47,7 @@ namespace MonoGame.Tests.Framework
             throw new NotImplementedException();
         }
 
-        protected override void SetSupportedOrientations(DisplayOrientation orientations)
+        protected internal override void SetSupportedOrientations(DisplayOrientation orientations)
         {
             throw new NotImplementedException();
         }
