@@ -219,7 +219,6 @@ This package provides you with the content pipeline for Windows, Mac and Linux w
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\ThirdParty\Dependencies\SharpFont\Windows\x64\freetype6.dll" Visible="false">
-      <Link>runtimes\win-x64\native\freetype6.dll</Link>
       <PackagePath>runtimes\win-x64\native</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
