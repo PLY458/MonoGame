@@ -106,7 +106,7 @@
       Path="ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll" />
     <Binary
       Name="SharpFont"
-      Path="ThirdParty\Dependencies\SharpFont\Windows\x64\SharpFont.dll" />
+      Path="ThirdParty\Dependencies\SharpFont\x64\SharpFont.dll" />
     <Binary
       Name="PVRTexLibNET"
       Path="ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll" />
