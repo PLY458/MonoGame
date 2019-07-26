@@ -1668,6 +1668,19 @@
 
               <xsl:variable name="extern"
                 select="$root/Input/Projects/ExternalProject[@Name=$include-name]" />
+              <xsl:for-each select="$extern/PackageReference">
+                <xsl:variable name="include-path" select="./@Include" />
+                <xsl:variable name="version" select="./@Version" />
+                <PackageReference>
+                  <xsl:attribute name="Include">
+                    <xsl:value-of select="@Include" />
+                  </xsl:attribute>
+                  <xsl:attribute name="Version">
+                    <xsl:value-of select="@Version" />
+                  </xsl:attribute>
+                  <xsl:text />
+                </PackageReference>
+              </xsl:for-each>
 
               <xsl:for-each select="$extern/Binary">
                 <xsl:call-template name="ReferenceToBinary">
@@ -1677,6 +1690,21 @@
               </xsl:for-each>
               <xsl:for-each select="$extern/Platform
                                       [@Type=$root/Input/Generation/Platform]">
+
+                <xsl:for-each select="./PackageReference">
+                  <xsl:variable name="include-path" select="./@Include" />
+                  <xsl:variable name="version" select="./@Version" />
+                  <PackageReference>
+                    <xsl:attribute name="Include">
+                      <xsl:value-of select="@Include" />
+                    </xsl:attribute>
+                    <xsl:attribute name="Version">
+                      <xsl:value-of select="@Version" />
+                    </xsl:attribute>
+                    <xsl:text />
+                  </PackageReference>
+                </xsl:for-each>
+
                 <xsl:for-each select="./Binary">
                   <xsl:call-template name="ReferenceToBinary">
                     <xsl:with-param name="binary" select="." />
@@ -1788,6 +1816,7 @@
 
                 <xsl:for-each select="$extern/Platform
                                         [@Type=$root/Input/Generation/Platform]">
+
                   <xsl:for-each select="./Reference">
                     <xsl:variable name="refd-name" select="./@Include" />
                     <xsl:if test="count($root/Input/Projects/IncludeProject[@Name=$refd-name]) > 0">
@@ -1881,6 +1910,7 @@
               </xsl:for-each>
               <xsl:for-each select="$extern/Platform
                                       [@Type=$root/Input/Generation/Platform]">
+
                 <xsl:for-each select="./NativeBinary">
                   <xsl:call-template name="NativeBinary">
                     <xsl:with-param name="project_path"><xsl:value-of select="$project/@Path" /></xsl:with-param>
