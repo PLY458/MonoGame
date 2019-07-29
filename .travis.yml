@@ -1,0 +1,8 @@
+os: osx
+language: csharp
+mono:
+- latest
+script:
+- chmod +x build_travis.sh
+- ./build_travis.sh
+
