@@ -50,7 +50,7 @@
   <target name="build_windows" description="Build Windows" depends="_prebuild">
     <if test="${os == 'Win32NT'}">
       <exec program="Protobuild" commandline="-generate Windows" />
-      <exec program="${nuget3path}/nuget.exe" commandline="restore MonoGame.Framework.Windows.sln -NonInteractive" />
+      <exec program="${msbuildwin}" commandline="/t:restore MonoGame.Framework.Windows.sln" />
       <exec program="${msbuildwin}" commandline="MonoGame.Framework.Windows.sln /t:Clean /p:Configuration=Release" />
       <exec program="${msbuildwin}" commandline="MonoGame.Framework.Windows.sln /t:Build /p:Configuration=Release" />
       <exec program="${msbuildwin}" commandline="MonoGame.Framework.Windows.sln /t:Clean /p:Configuration=Debug" />
