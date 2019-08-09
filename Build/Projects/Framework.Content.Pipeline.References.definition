@@ -118,7 +118,7 @@
     <NativeBinary Path="ThirdParty\Dependencies\NVTT\Windows\nvtt.dll" />
     <NativeBinary Path="ThirdParty\Dependencies\assimp\Assimp64.dll" />
     <NativeBinary Path="ThirdParty\Dependencies\MojoShader\Windows\libmojoshader_64.dll" />
-    <NativeBinary Path="ThirdParty\Dependencies\SharpFont\Windows\x64\freetype6.dll" />
+    <NativeBinary Path="ThirdParty\Dependencies\SharpFont\x64\freetype6.dll" />
     <NativeBinary Path="ThirdParty\Dependencies\FreeImage.NET\Windows\FreeImage.dll" />
     <NativeBinary Path="ThirdParty\Dependencies\ffmpeg\Windows\x64\ffmpeg.exe" />
     <NativeBinary Path="ThirdParty\Dependencies\ffmpeg\Windows\x64\ffprobe.exe" />
