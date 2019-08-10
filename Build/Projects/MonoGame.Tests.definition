@@ -138,9 +138,13 @@
       <Link>PVRTexLibNET.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <!-- We need the dll.config file on Mac because Mono doesn't test for the .dylib extension automatically -->
+    <None Include="..\ThirdParty\Dependencies\SharpFont\x64\SharpFont.dll.config">
+      <Platforms>Linux</Platforms>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="..\ThirdParty\Dependencies\SharpFont\x64\libfreetype.6.dylib"  Condition="Exists ('/Applications/Utilities/Console.app/')">
       <Platforms>Linux</Platforms>
-      <Link>libfreetype6.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\ThirdParty\Dependencies\SharpFont\x64\libpng15.15.dylib" Condition="Exists ('/Applications/Utilities/Console.app/')">

@@ -77,7 +77,9 @@
     <NativeBinary Path="ThirdParty\Dependencies\NVTT\MacOS\libnvmath.dylib" />
     <NativeBinary Path="ThirdParty\Dependencies\NVTT\MacOS\libnvtt.dylib" />
     <NativeBinary Path="ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll.config" />
-    <NativeBinary Path="ThirdParty\Dependencies\SharpFont\x64\libfreetype.6.dylib" Link="libfreetype6.dylib"/>
+    <!-- We need the dll.config file on Mac because Mono doesn't test for the .dylib extension automatically -->
+    <NativeBinary Path="ThirdParty\Dependencies\SharpFont\x64\SharpFont.dll.config"/>
+    <NativeBinary Path="ThirdParty\Dependencies\SharpFont\x64\libfreetype.6.dylib" />
     <NativeBinary Path="ThirdParty\Dependencies\SharpFont\x64\libpng15.15.dylib" />
     <NativeBinary Path="ThirdParty\Dependencies\assimp\AssimpNet.dll.config" />
     <NativeBinary Path="ThirdParty\Dependencies\assimp\libassimp.dylib" />
