@@ -34,7 +34,7 @@ namespace Microsoft.Xna.Framework.Content.Pipeline
             // back to a general exception from Process.Start()
             var fullPath = FindCommand(command);
             if (string.IsNullOrEmpty(fullPath))
-                throw new Exception(string.Format("Couldn't locate external tool '{0}'. Tried path '{1}'.", command, fullPath));
+                throw new Exception(string.Format("Couldn't locate external tool '{0}'.", command));
 
             // We can't reference ref or out parameters from within
             // lambdas (for the thread functions), so we have to store
