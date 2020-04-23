@@ -86,6 +86,12 @@ object DevelopMac : BuildType({
 
     steps {
         exec {
+            name = "dotnet tool restore"
+            path = "dotnet"
+            arguments = "tool restore"
+            formatStderrAsError = true
+        }
+        exec {
             name = "Running Cake Script"
             path = "dotnet"
             arguments = "cake build.cake"
@@ -153,6 +159,12 @@ object DevelopWin : BuildType({
     }
 
     steps {
+        exec {
+            name = "dotnet tool restore"
+            path = "dotnet"
+            arguments = "tool restore"
+            formatStderrAsError = true
+        }
         exec {
             name = "Running Cake Script"
             path = "dotnet-cake"
@@ -468,6 +480,12 @@ object TestMac : BuildType({
 
     steps {
         exec {
+            name = "dotnet tool restore"
+            path = "dotnet"
+            arguments = "tool restore"
+            formatStderrAsError = true
+        }
+        exec {
             name = "Running Cake Script"
             path = "dotnet"
             arguments = "cake build.cake --build-target=Test"
@@ -563,6 +581,12 @@ object TestWindows : BuildType({
     }
 
     steps {
+        exec {
+            name = "dotnet tool restore"
+            path = "dotnet"
+            arguments = "tool restore"
+            formatStderrAsError = true
+        }
         exec {
             name = "Running Cake Script"
             path = "dotnet-cake"
